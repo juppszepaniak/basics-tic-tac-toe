@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --base-clr: #e6e6ef;
+  --base-variant-clr: #c5c5cc;
+  --secondary-base-clr: #cacaca;
+  --hover-clr: #8a96c9;
+  --text-clr: #1e1e1f;
+  --accent-clr: #6c71fd;
+}
+
+.darkmode {
+  --base-clr: #11121a;
+  --base-variant-clr: #82828a;
+  --secondary-base-clr: #42434a;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: var(--base-clr);
+}
+
+h1, h2, h3, p {
+  color: var(--text-clr);
+}
+
+/* Light - Dark - Mode */
+
+#theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border: 0.1rem solid var(--base-variant-clr);
+  border-radius: 2rem;
+  background-color: var(--base-variant-clr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+#theme-switch svg {
+  fill: var(--text-clr);
+}
+
+#theme-switch svg:last-child {
+  display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+  display: none;
+}
+.darkmode #theme-switch svg:last-child {
+  display: block;
+}
+
+/* Game */
+
+.playground-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  font-size: 150px;
+  color: var(--text-clr);
+  background-color: var(--secondary-base-clr);
+  border: 2px solid var(--secondary-base-clr);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square:hover {
+  background-color: var(--hover-clr);
+  border: 2px solid var(--accent-clr);
+  cursor: pointer;
+}
+
+#reset-btn {
+  font-size: 30px;
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: auto;
+  border-radius: 2rem;
+  border: 0.1rem solid var(--accent-clr);
+  background: var(--accent-clr);
+  color: var(--text-clr);
+}
+
+#reset-btn:hover {
+  background: var(--hover-clr);
+  border: 0.1rem solid var(--accent-clr);
+  color: var(--text-clr);
+  cursor: pointer;
+}

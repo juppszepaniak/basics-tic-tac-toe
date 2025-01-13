@@ -1,0 +1,12 @@
+@media screen and (max-width: 800px) {
+  .board {
+    gap: 5px;
+    width: 300px;
+  }
+
+  .square {
+    font-size: 75px;
+    width: 100px;
+    height: 100px;
+  }
+}
